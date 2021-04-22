@@ -1,24 +1,24 @@
-import React, {memo,  useCallback,  useEffect, useState} from 'react'
-import { Chart } from '../components/chart';
-import { Filter } from '../components/filter';
-import { PageProps} from "./Page.types";
+import React, { memo, useCallback, useEffect, useState } from 'react'
+import { Chart } from '../components/chart/Chart'
+import { Filter } from '../components/filter/Filter';
+import { PageProps } from "./Page.types";
 
-export const Page = memo<PageProps>( ( {projectId} )=>{
-    const [selectedFilter,setSelectedFilters]=useState('first1');
+export const Page = memo<PageProps>(({ projectId }) => {
+    const [selectedFilter, setSelectedFilters] = useState('first1');
     console.log(selectedFilter);
-    useEffect(()=>{
+    useEffect(() => {
         console.log('useeffect');
-    },[projectId])
+    }, [projectId])
 
-    
-    const onChange = useCallback((values)=>{
+
+    const onChange = useCallback((values) => {
         setSelectedFilters(values);
         console.log(`values is ${values}`);
-    },[]);
-    
+    }, []);
+
 
     return <div> remote ssh page
-            <Chart chartid="10" selectedFilter={selectedFilter}/>
-            <Filter filterid="90" onFilterChange={onChange}/>
-         </div>
+            <Chart chartid="10" selectedFilter={selectedFilter} />
+        <Filter filterid="90" onFilterChange={onChange} />
+    </div>
 });
