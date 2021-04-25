@@ -4,22 +4,21 @@ import { Filter } from '../components/filter';
 import { PageProps} from "./Page.types";
 
 export const Page = memo<PageProps>( ( {projectId} )=>{
-    const [filters,setFilters]=useState();
-    console.log(filters);
+    const [selectedFilter,setSelectedFilters]=useState('first1');
+    console.log(selectedFilter);
     useEffect(()=>{
-        setFilters(undefined);
         console.log('useeffect');
     },[projectId])
 
     
     const onChange = useCallback((values)=>{
-        setFilters(values);
+        setSelectedFilters(values);
         console.log(`values is ${values}`);
     },[]);
     
 
     return <div> remote ssh page
-            <Chart chartid="10"/>
+            <Chart chartid="10" selectedFilter={selectedFilter}/>
             <Filter filterid="90" onFilterChange={onChange}/>
          </div>
 });

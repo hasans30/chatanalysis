@@ -2,6 +2,8 @@ import React, {memo} from 'react'
 import FilterProps from './filter.types';
 
 export const Filter = memo<FilterProps>( ( {filterid, onFilterChange} )=>{
-    const filter = <button onClick={onFilterChange}>Click here </button>;
-    return <div> {filter} </div>
+    const onChange=(value:any)=> ()=>{onFilterChange(value);};
+    const filternames = ['filter1', 'filter2','filter3'];
+    const filters = filternames.map(fname=> <button key={fname} onClick={onChange(fname)}>{fname}</button>);
+    return <div> {filters} </div>
 });
