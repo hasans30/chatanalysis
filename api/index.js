@@ -2,6 +2,10 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 3030;
 const programmingLanguagesRouter = require("./routes/programmingLanguages");
+const  monthlyStatRouter = require("./routes/monthlyStat");
+
+const  getdata=require("./data/data");
+console.log(getdata.chartData().data);
 
 app.use(express.json());
 app.use(
@@ -14,7 +18,9 @@ app.get("/", (req, res) => {
   res.json({ message: "ok" });
 });
 
-app.use("/programming-languages", programmingLanguagesRouter);
+app.use("/prog", programmingLanguagesRouter);
+
+app.use("/data",monthlyStatRouter);
 
 /* Error handler middleware */
 app.use((err, req, res, next) => {
