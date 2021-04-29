@@ -16,9 +16,10 @@ export const Page = memo<PageProps>(({ projectId }) => {
         console.log(`values is ${values}`);
     }, []);
 
+    const filter = <Filter filterid={selectedFilter} onFilterChange={onChange} />;
 
     return <div> remote ssh page
             <Chart chartid="10" selectedFilter={selectedFilter} />
-        <Filter filterid="90" onFilterChange={onChange} />
+        {filter}
     </div>
 });

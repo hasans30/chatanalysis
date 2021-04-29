@@ -21,5 +21,5 @@ export const Chart = memo<ChartProps>(({ chartid, selectedFilter }) => {
         }
         Highcharts.chart(options);
     }, [lineChartData]);
-    return <div id="main" > </div>;
+    return <><div id="main" />  <div> selected filter {selectedFilter} </div> </>;
 });
