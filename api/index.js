@@ -1,11 +1,14 @@
 const express = require("express");
+const cors=require('cors');
 const app = express();
 const port = process.env.PORT || 3030;
 const programmingLanguagesRouter = require("./routes/programmingLanguages");
 const  monthlyStatRouter = require("./routes/monthlyStat");
 
-const  getdata=require("./data/data");
-console.log(getdata.chartData().data);
+var corsOptions = {
+  origin: '*',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
 
 app.use(express.json());
 app.use(
@@ -20,7 +23,7 @@ app.get("/", (req, res) => {
 
 app.use("/prog", programmingLanguagesRouter);
 
-app.use("/data",monthlyStatRouter);
+app.use("/data",cors(corsOptions),monthlyStatRouter);
 
 /* Error handler middleware */
 app.use((err, req, res, next) => {

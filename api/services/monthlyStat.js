@@ -6,14 +6,12 @@ const config = require('../config');
 async function getMonthlyStat(page = 1){
   const offset = helper.getOffset(page, config.listPerPage);
   const rows = await db.query(
-    `select @rowid:=@rowid+1 as rowid, table1.* 
-     from (select name_map.name_mine, count(*) 
+     `select name_map.name_mine as name, count(*) as count
         from chat_dedupe_stat,name_map where chat_dedupe_stat.id=name_map.ID and timestamp>=
-            '2021-03-01' and timestamp<'2021-04-10'
+            ? and timestamp<?
              group by chat_dedupe_stat.id
-             order by count(*) desc) as table1, 
-             (select @rowid:=0) as table2;`, 
-    [offset, config.listPerPage]
+             order by count(*) desc`,
+    ['2021-03-01', '2021-04-01']
   );
   const data = helper.emptyOrRows(rows);
   const meta = {page};
