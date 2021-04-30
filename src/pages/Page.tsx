@@ -1,9 +1,14 @@
 import React, { memo, useCallback, useEffect, useState } from 'react'
+import useSWR from 'swr';
 import { Chart } from '../components/chart/Chart'
 import { Filter } from '../components/filter/Filter';
 import { PageProps } from "./Page.types";
 
 export const Page = memo<PageProps>(({ projectId }) => {
+
+    // fetch data
+    const { data, error } = useSWR('http://hasan.westus2.cloudapp.azure.com:3030/data');
+
     const [selectedFilter, setSelectedFilters] = useState('first1');
     console.log(selectedFilter);
     useEffect(() => {
@@ -16,10 +21,13 @@ export const Page = memo<PageProps>(({ projectId }) => {
         console.log(`values is ${values}`);
     }, []);
 
+    if (error) return <div>failed to load data error.</div>
+    if (!data) return <div> loading...</div>;
+
     const filter = <Filter filterid={selectedFilter} onFilterChange={onChange} />;
 
     return <div> remote ssh page
-            <Chart chartid="10" selectedFilter={selectedFilter} />
+            <Chart data={data.data} selectedFilter={selectedFilter} />
         {filter}
     </div>
 });
