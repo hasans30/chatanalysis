@@ -1,3 +1,4 @@
+import { Spinner } from '@fluentui/react';
 import React, { memo, useCallback, useEffect, useState } from 'react'
 import useSWR from 'swr';
 import { Chart } from '../components/chart/Chart'
@@ -22,12 +23,12 @@ export const Page = memo<PageProps>(({ projectId }) => {
     }, []);
 
     if (error) return <div>failed to load data error.</div>
-    if (!data) return <div> loading...</div>;
+    if (!data) return <Spinner label="loading..." />
 
     const filter = <Filter filterid={selectedFilter} onFilterChange={onChange} />;
 
-    return <div> remote ssh page
-            <Chart data={data.data} selectedFilter={selectedFilter} />
+    return <div>
+        <Chart data={data.data} selectedFilter={selectedFilter} />
         {filter}
     </div>
 });
