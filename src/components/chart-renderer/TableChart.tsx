@@ -12,28 +12,19 @@ const TableChart: FunctionComponent<TableChartProps> = (data) => {
 
 
 function getItems(data: ChartData['data']): IDocument[] {
-    console.log(data);
-    const fakeData = [{
-        key: '1',
-        name: 'My name',
-        count: '12'
-    }]
-    const allItems: IDocument[] = data.map((e) => {
+    const allItems: IDocument[] = data.map((e, idx) => {
         return {
-            key: '1' + e.name,
+            key: e.name,
+            rank: idx + 1,
             name: e.name,
             value: '' + e.count
         }
     });
     return allItems;
-    // return [{
-    //     key: '1',
-    //     name: 'Item x',
-    //     value: '1'
-    // }];
 }
 function getColumns(): IColumn[] {
     return [
+        { key: 'column0', name: 'Sl#', fieldName: 'rank', minWidth: 100, maxWidth: 200, isResizable: true },
         { key: 'column1', name: 'Name', fieldName: 'name', minWidth: 100, maxWidth: 200, isResizable: true },
         { key: 'column2', name: 'Value', fieldName: 'value', minWidth: 50, maxWidth: 70, isResizable: true },
     ];

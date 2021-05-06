@@ -20,6 +20,7 @@ export const convertToLineChart : (data: ChartData)=> TransformedData = (data) =
         xAxis: {categories: xAxisCategories},
         series:[
         {
+            name:'count',
             type: 'line',
             data: lineData
         }

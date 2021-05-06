@@ -12,9 +12,12 @@ export const Chart = memo<ChartProps>(({ data, selectedFilter }) => {
             chart: {
                 renderTo: 'main',
             },
+            title: {
+                text: 'Chat count'
+            },
             ...lineChartData
         }
         Highcharts.chart(options);
     }, [lineChartData]);
-    return <><div id="main" />  <div> selected filter {selectedFilter} </div> </>;
+    return <><div id="main" />  </>;
 });
