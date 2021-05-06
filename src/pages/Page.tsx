@@ -1,4 +1,4 @@
-import { DetailsList, IColumn, Spinner } from '@fluentui/react';
+import { Spinner } from '@fluentui/react';
 import React, { memo, useCallback, useEffect, useState } from 'react'
 import useSWR from 'swr';
 import TableChart from '../components/chart-renderer/TableChart';
