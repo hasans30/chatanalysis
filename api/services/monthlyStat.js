@@ -3,7 +3,35 @@ const db = require('./db');
 const helper = require('../helper');
 const config = require('../config');
 
-async function getMonthlyStat(page = 1, monthsRange=['2021-03-01', '2021-04-01']){
+function getRange(month){
+  const range=new Map(
+    [
+      ['jan',['2021-01-01','2021-02-01']],
+      ['feb',['2021-02-01','2021-03-01']],
+      ['mar',['2021-03-01','2021-04-01']],
+      ['apr',['2021-04-01','2021-05-01']],
+      ['may',['2021-05-01','2021-06-01']],
+      ['june',['2021-06-01','2021-07-01']],
+      ['july',['2021-07-01','2021-08-01']],
+      ['aug',['2021-08-01','2021-09-01']],
+      ['sep',['2021-09-01','2021-10-01']],
+      ['oct',['2021-10-01','2021-11-01']],
+      ['nov',['2021-11-01','2021-12-01']],
+      ['dev',['2021-12-01','2022-01-01']],
+    ]
+  );
+
+  return range.get(month);
+
+}
+
+async function getMonthlyStat(page = 1, month ){
+  const monthsRange=getRange(month);
+  if(monthsRange===undefined)
+    return {
+      data:[],
+      meta:{page}
+    };
   const offset = helper.getOffset(page, config.listPerPage);
   const rows = await db.query(
      `select name_map.name_mine as name, count(*) as count
