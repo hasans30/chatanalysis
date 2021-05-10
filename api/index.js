@@ -2,6 +2,8 @@ const express = require("express");
 const cors=require('cors');
 const app = express();
 const port = process.env.PORT || 3030;
+const fs = require('fs');
+const https = require('https');
 const programmingLanguagesRouter = require("./routes/programmingLanguages");
 const  monthlyStatRouter = require("./routes/monthlyStat");
 
@@ -23,7 +25,7 @@ app.get("/", (req, res) => {
 
 app.use("/prog", programmingLanguagesRouter);
 
-app.use("/data",cors(corsOptions),monthlyStatRouter);
+app.use("/data",cors(),monthlyStatRouter);
 
 /* Error handler middleware */
 app.use((err, req, res, next) => {
@@ -37,3 +39,11 @@ app.use((err, req, res, next) => {
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
+
+https.createServer({
+  key: fs.readFileSync('server.key'),
+  cert: fs.readFileSync('server.cert')
+}, app)
+.listen(3031, function () {
+  console.log('Example app listening on port 3000! Go to https://localhost:3000/')
+})

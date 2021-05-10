@@ -1,6 +1,7 @@
 import { Spinner } from '@fluentui/react';
 import React, { memo, useCallback, useEffect, useState } from 'react'
 import useSWR from 'swr';
+import moment from 'moment';
 import TableChart from '../components/chart-renderer/TableChart';
 import { Chart } from '../components/chart/Chart'
 import { Filter } from '../components/filter/Filter';
@@ -9,8 +10,9 @@ import { PageProps } from "./Page.types";
 export const Page = memo<PageProps>(({ projectId }) => {
 
     // fetch data
-    const [selectedFilter, setSelectedFilters] = useState('mar');
-    const { data, error } = useSWR(`http://hasan.westus2.cloudapp.azure.com:3030/data?month=${selectedFilter}`);
+    const currentMonth = moment().format("MMM").toLowerCase();
+    const [selectedFilter, setSelectedFilters] = useState(currentMonth);
+    const { data, error } = useSWR(`/data/${selectedFilter}.json`);
 
     console.log(selectedFilter);
     useEffect(() => {
@@ -22,14 +24,17 @@ export const Page = memo<PageProps>(({ projectId }) => {
         setSelectedFilters(values);
     }, []);
 
-    if (error) return <div>failed to load data error.</div>
-    if (!data) return <Spinner label="loading..." />
-
+    const errorState = <div>No data available..</div>;
+    const spinner = <Spinner label="loading..." />
+    const charts = !data ? spinner : <>
+        <Chart data={data.data} selectedFilter={selectedFilter} />
+        <TableChart data={data.data} />
+    </>;
     const filter = <Filter filterid={selectedFilter} onFilterChange={onChange} />;
     return <div>
         {filter}
-        <Chart data={data.data} selectedFilter={selectedFilter} />
-        <TableChart data={data.data} />
+        {error ? errorState : charts}
+
     </div>
 });
 
