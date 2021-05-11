@@ -8,35 +8,27 @@ const navigationStyles = {
         boxSizing: 'border-box',
         border: '1px solid #eee',
         overflowY: 'auto',
-        paddingTop: '10vh',
+        paddingTop: '1vh',
     },
 };
-const lists = [
+const links = [
     {
         links: [
             {
-                name: 'Home',
-                url: '/',
-                links: [
-                    {
-                        name: 'Monthly Count',
-                        url: '/',
-                        key: 'monthlyreport'
-                    },
-                    {
-                        name: 'Daily trend',
-                        url: '/',
-                        key: 'dailytrend'
-                    }
-                ],
-                isExpanded: true
+                name: 'Monthly Count',
+                url: '/monthly',
+                key: 'monthlyreport'
             },
+            {
+                name: 'Daily trend',
+                url: '/daily',
+                key: 'dailytrend'
+            }
         ]
-    }
-];
+    }];
 const NavbarBase: React.FC<NavbarType> = () => {
     const nav2 = <Nav
-        groups={lists}
+        groups={links}
         onLinkClick={navbarClickHandler}
         selectedKey={'key3'}
         styles={navigationStyles}
