@@ -1,23 +1,9 @@
-import React, { memo, useEffect } from 'react';
+import { memo } from 'react';
 import ChartProps from './Chart.types';
-import * as Highcharts from 'highcharts';
-import { ChartData, convertToLineChart } from '../chart-renderer/transformer/DataTransformer';
+import VisualizationRenderer from '../chart-renderer/VisualizationRenderer';
 
 export const Chart = memo<ChartProps>(({ data, selectedFilter }) => {
 
-    let dataTmp: ChartData = { data: data }
-    const lineChartData = convertToLineChart(dataTmp);
-    useEffect(() => {
-        const options: Highcharts.Options = {
-            chart: {
-                renderTo: 'main',
-            },
-            title: {
-                text: 'Chat count'
-            },
-            ...lineChartData
-        }
-        Highcharts.chart(options);
-    }, [lineChartData]);
-    return <><div id="main" />  </>;
+    return <VisualizationRenderer data={data} />;
+
 });

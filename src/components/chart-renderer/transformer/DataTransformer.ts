@@ -12,7 +12,7 @@ export interface TransformedData{
     series: Highcharts.Options['series']
 }
 
-export const convertToLineChart : (data: ChartData)=> TransformedData = (data) => {
+export const getLineChartOptions : (data: ChartData)=> TransformedData = (data) => {
     const xAxisCategories = data.data.map(e=>e.name) ;
     const lineData: number []= data.data.map(e => e.count);
 
