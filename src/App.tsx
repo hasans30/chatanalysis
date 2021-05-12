@@ -5,6 +5,7 @@ import Navbar from './components/navbar/Navbar';
 import { initializeIcons } from '@fluentui/react/lib/Icons';
 import 'office-ui-fabric-react/dist/css/fabric.css';
 import NoData from "./components/no-data/NoData";
+import MonthlyReport from "./features/MonthlyReport";
 
 function App() {
   initializeIcons();
@@ -17,8 +18,13 @@ function App() {
         <div className="main-element ms-Grid-col ms-sm11 ms-xl10">
           <BrowserRouter >
             <Switch>
-              <Redirect exact from='/' to='/monthly' strict />
-              <Route exact path="/monthly" component={Page} />
+              <Redirect exact from='/' to='/monthly-compact' strict />
+              <Route exact path="/monthly-compact" >
+                <MonthlyReport compact />
+              </Route>
+              <Route exact path="/monthly-all" >
+                <MonthlyReport compact={false} />
+              </Route>
               <Route path='*' component={NoData} />
             </Switch>
           </BrowserRouter>

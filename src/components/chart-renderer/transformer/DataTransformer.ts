@@ -35,17 +35,39 @@ export const getLineChartOptions : (data: ChartData)=> Highcharts.Options = (dat
 export const getColumnOptions : (data: ChartData)=> Highcharts.Options = (data) => {
     const xAxisCategories = data.data.map(e=>e.name) ;
     const lineData: number []= data.data.map(e => e.count);
+    const total : number = lineData.reduce((prev,curr)=>prev+curr);
+    const avg : number = lineData.length===0? 0: Math.floor(total/(lineData.length));
 
     return {
         title: {
                 text: 'Chat count'
             },
-        xAxis: {categories: xAxisCategories},
+        subtitle: {
+            text: `Total chat ${total}`
+        },
+        xAxis: {
+            categories: xAxisCategories,
+        },
+        yAxis:{
+            plotLines:[{
+                            color:'red',
+                            zIndex:4,
+                            width: 1,
+                            value: avg,
+                            label: {
+                                text: `Avg ${avg}`,
+                            }
+
+            }]
+        },
         series:[
             {
                 name:'count',
                 data: lineData,
                 type: 'column',
+                dataLabels: {
+                    enabled: true,
+                }
             },
         ]
     } ;

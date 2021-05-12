@@ -15,9 +15,14 @@ const links = [
     {
         links: [
             {
-                name: 'Monthly Count',
-                url: '/monthly',
-                key: 'monthlyreport'
+                name: 'Monthly count (compact)',
+                url: '/monthly-compact',
+                key: 'monthlyreportcompact'
+            },
+            {
+                name: 'Monthly count (all)',
+                url: '/monthly-all',
+                key: 'monthlyreportall'
             },
             {
                 name: 'Daily trend',

@@ -7,7 +7,7 @@ const VisualizationRenderer = memo<VisualizationRendererProps>(({ options }) => 
     useEffect(() => {
         Highcharts.chart("main", options);
     }, [options]);
-    return <><div id="main" />  </>;
+    return <><div id="main" style={{ minHeight: '500px' }} />  </>;
 });
 
 export default VisualizationRenderer;
