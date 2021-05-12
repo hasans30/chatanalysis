@@ -1,21 +1,12 @@
 import * as Highcharts from 'highcharts';
-import { LineChartProps } from './VisualizationRenderer.types';
+import { VisualizationRendererProps } from './VisualizationRenderer.types';
 
 import { memo, useEffect } from 'react';
-import { ChartData, getLineChartOptions } from './transformer/DataTransformer';
 
-const VisualizationRenderer = memo<LineChartProps>(({ data }) => {
+const VisualizationRenderer = memo<VisualizationRendererProps>(({ options }) => {
     useEffect(() => {
-        let dataTmp: ChartData = { data: data }
-        const lineChartData = getLineChartOptions(dataTmp)
-        const options: Highcharts.Options = {
-            title: {
-                text: 'Chat count'
-            },
-            ...lineChartData
-        }
         Highcharts.chart("main", options);
-    }, [data]);
+    }, [options]);
     return <><div id="main" />  </>;
 });
 
