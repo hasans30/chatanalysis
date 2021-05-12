@@ -1,6 +1,6 @@
 import moment from 'moment';
 import { Spinner } from 'office-ui-fabric-react';
-import React, { memo, useCallback, useEffect, useState } from 'react';
+import { memo, useCallback, useState } from 'react';
 import useSWR from 'swr';
 import TableChart from '../components/chart-renderer/TableChart';
 import { Chart } from '../components/chart/Chart';

@@ -1,5 +1,4 @@
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom"
-import { Page } from './pages/Page';
 import './App.css';
 import Navbar from './components/navbar/Navbar';
 import { initializeIcons } from '@fluentui/react/lib/Icons';

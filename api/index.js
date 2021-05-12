@@ -6,6 +6,7 @@ const fs = require('fs');
 const https = require('https');
 const programmingLanguagesRouter = require("./routes/programmingLanguages");
 const  monthlyStatRouter = require("./routes/monthlyStat");
+const  monthlyAllStatRouter = require("./routes/monthlyStatAll");
 
 var corsOptions = {
   origin: '*',
@@ -26,6 +27,7 @@ app.get("/", (req, res) => {
 app.use("/prog", programmingLanguagesRouter);
 
 app.use("/data",cors(),monthlyStatRouter);
+app.use("/allmonthly",cors(),monthlyAllStatRouter);
 
 /* Error handler middleware */
 app.use((err, req, res, next) => {
@@ -40,6 +42,8 @@ app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
 
+/*
+// this is how we can create https endpoint. 
 https.createServer({
   key: fs.readFileSync('server.key'),
   cert: fs.readFileSync('server.cert')
@@ -47,3 +51,4 @@ https.createServer({
 .listen(3031, function () {
   console.log('Example app listening on port 3000! Go to https://localhost:3000/')
 })
+*/
