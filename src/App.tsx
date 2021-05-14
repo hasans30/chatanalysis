@@ -11,15 +11,7 @@ function App() {
   return (
     <BrowserRouter >
       <Navbar />
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "flex-start",
-          position: "absolute",
-          flexWrap: "wrap",
-          left: "20%"
-        }}
-      >
+      <div>
         <Switch>
           <Redirect exact from='/' to='/monthly-compact' strict />
           <Route exact path="/monthly-compact" >
