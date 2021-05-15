@@ -6,8 +6,15 @@ import 'office-ui-fabric-react/dist/css/fabric.css';
 import NoData from "./components/no-data/NoData";
 import MonthlyReport from "./features/MonthlyReport";
 
+import { useQuery } from '@apollo/client';
+import { GET_APP_STATE } from './operations/queries/getAppState';
+
 function App() {
   initializeIcons();
+  // use local app state example
+  const appStateResult = useQuery(GET_APP_STATE);
+  console.log(`app state ${appStateResult.data.appState.org}`)
+
   return (
     <BrowserRouter >
       <Navbar />
