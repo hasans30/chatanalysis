@@ -6,7 +6,7 @@ const config = require('../config');
 async function getDailyTrends(page = 1){
   const rows = await db.query(
         `
-        select count(*) as count, cast(timestamp as date) as date from chat_text where timestamp>='2021-01-01' group by date;
+          select count(*) as count, date(timestamp) as date from chat_text where timestamp>='2021-01-01' group by date
         `
   );
   const data = helper.emptyOrRows(rows);

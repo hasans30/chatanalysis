@@ -9,7 +9,7 @@ const DailyTrendReport = memo(() => {
     const query = Query.get(ReportType.DailyTotalTrend);
     const { data, error } = useSWR(`${query}`);
     const spinner = <Spinner label="loading..." />;
-    const chart = !data ? spinner : <Chart data={data.data} chartType={ChartType.LineChart} />;
+    const chart = !data ? spinner : <Chart data={data.data} chartType={ChartType.DateChart} />;
 
     return (
         <div>

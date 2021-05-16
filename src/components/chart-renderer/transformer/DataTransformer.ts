@@ -3,6 +3,7 @@ import * as Highcharts from 'highcharts';
 export interface ChartData {
     data: {
         name:string,
+        date?:Date,
         count:number
     } []
 }
@@ -10,6 +11,33 @@ export interface ChartData {
 export interface TransformedData{
     xAxis: Highcharts.Options['xAxis'],
     series: Highcharts.Options['series']
+}
+
+export const getDateLineOptions : (data: ChartData) => Highcharts.Options = (data) => {
+const transformedData=data.data.map(function(el, i) {
+    return {
+        x: new Date(el.date!).getTime(),
+        y: el.count
+    }
+});
+    return {
+        title: {
+                text: 'Chat count'
+            },
+            chart:
+            {
+              type: 'area',  
+            },
+            xAxis: {type:'datetime'},
+            series:[
+                {
+                    name:'count',
+                    data: transformedData,
+                    type:'area'
+                },
+            ]
+        } ;
+
 }
 
 export const getLineChartOptions : (data: ChartData)=> Highcharts.Options = (data) => {

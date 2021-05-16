@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import ChartProps, { ChartType } from './Chart.types';
 import VisualizationRenderer from '../chart-renderer/VisualizationRenderer';
-import { ChartData, getColumnOptions, getLineChartOptions } from '../chart-renderer/transformer/DataTransformer';
+import { ChartData, getColumnOptions, getDateLineOptions, getLineChartOptions } from '../chart-renderer/transformer/DataTransformer';
 
 export const Chart = memo<ChartProps>(({ data, chartType = ChartType.ColumnChart }) => {
     let dataTmp: ChartData = { data: data }
@@ -14,6 +14,8 @@ export const Chart = memo<ChartProps>(({ data, chartType = ChartType.ColumnChart
         case ChartType.LineChart:
             options = getLineChartOptions(dataTmp);
             break;
+        case ChartType.DateChart:
+            options = getDateLineOptions(dataTmp);
     }
     return <VisualizationRenderer options={options} />;
 
