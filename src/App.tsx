@@ -5,6 +5,7 @@ import { initializeIcons } from '@fluentui/react/lib/Icons';
 import 'office-ui-fabric-react/dist/css/fabric.css';
 import NoData from "./components/no-data/NoData";
 import MonthlyReport from "./features/MonthlyReport";
+import DailyTrendReport from "./features/DailyTrendReport";
 
 function App() {
   initializeIcons();
@@ -19,6 +20,9 @@ function App() {
           </Route>
           <Route exact path="/monthly-all" >
             <MonthlyReport compact={false} />
+          </Route>
+          <Route exact path="/daily" >
+            <DailyTrendReport />
           </Route>
           <Route path='*' component={NoData} />
         </Switch>

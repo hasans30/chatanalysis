@@ -8,7 +8,7 @@ const Query = new Map(
     [
         [ReportType.CompactMonthly,'/data/compact-monthly'],
         [ReportType.AllMonthly,'/data/all-monthly'],
-        [ReportType.DailyTotalTrend,'/data/daily-total-trend']
+        [ReportType.DailyTotalTrend,'/data/daily-total-trend/data.json']
     ]
 );
 
