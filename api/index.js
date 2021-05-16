@@ -7,6 +7,7 @@ const https = require('https');
 const programmingLanguagesRouter = require("./routes/programmingLanguages");
 const  monthlyStatRouter = require("./routes/monthlyStat");
 const  monthlyAllStatRouter = require("./routes/monthlyStatAll");
+const getDailyTrendsRouter = require('./routes/dailyTrends');
 
 var corsOptions = {
   origin: '*',
@@ -28,6 +29,7 @@ app.use("/prog", programmingLanguagesRouter);
 
 app.use("/data",cors(),monthlyStatRouter);
 app.use("/allmonthly",cors(),monthlyAllStatRouter);
+app.use("/dailytrends",cors(),getDailyTrendsRouter);
 
 /* Error handler middleware */
 app.use((err, req, res, next) => {

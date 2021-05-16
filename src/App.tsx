@@ -8,6 +8,7 @@ import MonthlyReport from "./features/MonthlyReport";
 
 import { useQuery } from '@apollo/client';
 import { GET_APP_STATE } from './operations/queries/getAppState';
+import DailyTrendReport from "./features/DailyTrendReport";
 
 function App() {
   initializeIcons();
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route exact path="/monthly-all" >
             <MonthlyReport compact={false} />
+          </Route>
+          <Route exact path="/daily" >
+            <DailyTrendReport />
           </Route>
           <Route path='*' component={NoData} />
         </Switch>

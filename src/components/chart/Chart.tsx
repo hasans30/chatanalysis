@@ -1,12 +1,20 @@
 import { memo } from 'react';
-import ChartProps from './Chart.types';
+import ChartProps, { ChartType } from './Chart.types';
 import VisualizationRenderer from '../chart-renderer/VisualizationRenderer';
-import { ChartData, getColumnOptions } from '../chart-renderer/transformer/DataTransformer';
+import { ChartData, getColumnOptions, getLineChartOptions } from '../chart-renderer/transformer/DataTransformer';
 
-export const Chart = memo<ChartProps>(({ data, selectedFilter }) => {
+export const Chart = memo<ChartProps>(({ data, chartType = ChartType.ColumnChart }) => {
     let dataTmp: ChartData = { data: data }
     // get required highchart option and pass it to visualization renderer
-    const options = getColumnOptions(dataTmp);
+    let options = getColumnOptions(dataTmp);
+    switch (chartType) {
+        case ChartType.ColumnChart:
+            options = getColumnOptions(dataTmp);
+            break;
+        case ChartType.LineChart:
+            options = getLineChartOptions(dataTmp);
+            break;
+    }
     return <VisualizationRenderer options={options} />;
 
 });
