@@ -20,15 +20,33 @@ const transformedData=data.data.map(function(el, i) {
         y: el.count
     }
 });
+const total = data.data.reduce((acc,cur)=>acc+cur.count,0);
+const avg = data.data.length===0? 0: Math.floor(total/data.data.length);
     return {
         title: {
                 text: 'Chat count'
             },
+        subtitle: {
+            text: `Total chat ${total}`
+        },
+ 
             chart:
             {
               type: 'area',  
             },
             xAxis: {type:'datetime'},
+            yAxis: {
+ plotLines:[{
+                            color:'red',
+                            zIndex:4,
+                            width: 1,
+                            value: avg,
+                            label: {
+                                text: `Avg ${avg}`,
+                            }
+
+            }]
+            },
             series:[
                 {
                     name:'count',
