@@ -28,7 +28,7 @@ const MonthlyReport = memo<MonthlyReportProps>(({ compact = true }) => {
         <Chart data={data.data} chartType={ChartType.ColumnChart} />
         <TableChart data={data.data} />
     </>;
-    const filter = <Filter filterid={selectedFilter} onFilterChange={onChange} />;
+    const filter = <Filter currentFilter={selectedFilter} onFilterChange={onChange} />;
     return <div className='reportcontainer'>
         {filter}
         {error ? errorState : charts}
