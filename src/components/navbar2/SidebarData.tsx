@@ -18,5 +18,11 @@ export const SidebarData = [
     path: '/daily',
     icon: <IoIcons.IoIosPaper />,
     cName: "nav-text",
+  },
+  {
+    title: 'Word cloud',
+    path: '/wordcloud',
+    icon: <IoIcons.IoIosPaper />,
+    cName: "nav-text",
   }
 ];

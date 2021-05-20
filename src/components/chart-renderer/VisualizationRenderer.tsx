@@ -1,7 +1,9 @@
 import * as Highcharts from 'highcharts';
+import loadwordcloud from 'highcharts/modules/wordcloud';
 import { VisualizationRendererProps } from './VisualizationRenderer.types';
 
 import { memo, useEffect } from 'react';
+loadwordcloud(Highcharts);
 
 const VisualizationRenderer = memo<VisualizationRendererProps>(({ options }) => {
     useEffect(() => {

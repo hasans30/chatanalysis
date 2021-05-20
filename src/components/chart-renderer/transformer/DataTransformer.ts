@@ -8,6 +8,13 @@ export interface ChartData {
     } []
 }
 
+export interface WordInfo {
+    name: string,
+    weight: number
+}
+
+export type WordCloudInfo = WordInfo [];
+
 export interface TransformedData{
     xAxis: Highcharts.Options['xAxis'],
     series: Highcharts.Options['series']
@@ -119,4 +126,17 @@ export const getColumnOptions : (data: ChartData)=> Highcharts.Options = (data) 
     } ;
 };
 
+
+export function getWordCloudOptions(data: WordCloudInfo): Highcharts.Options {
+    return {
+        series: [{
+            type: 'wordcloud',
+            data: data,
+            name: 'Occurrences'
+        }],
+        title: {
+            text: 'Wordcloud of texts'
+        }
+    }
+}
 

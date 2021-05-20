@@ -2,6 +2,7 @@
     CompactMonthly,
     AllMonthly,
     DailyTotalTrend,
+    WordCloud,
 }
 
 const host=process.env.REACT_APP_API_BASE||'';
@@ -16,7 +17,8 @@ const Query = new Map(
     [
         [ReportType.CompactMonthly,`${baseURL}/data/compact-monthly`],
         [ReportType.AllMonthly,`${baseURL}/data/all-monthly`],
-        [ReportType.DailyTotalTrend,`${baseURL}/data/daily-total-trend/data.json`]
+        [ReportType.DailyTotalTrend,`${baseURL}/data/daily-total-trend/data.json`],
+        [ReportType.WordCloud,`${baseURL}/data/wordcloud`]
     ]
 );
 

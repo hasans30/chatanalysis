@@ -6,6 +6,7 @@ import 'office-ui-fabric-react/dist/css/fabric.css';
 import NoData from "./components/no-data/NoData";
 import MonthlyReport from "./features/MonthlyReport";
 import DailyTrendReport from "./features/DailyTrendReport";
+import WordCloudReport from "./features/WordCloudReport";
 
 function App() {
   initializeIcons();
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route exact path="/daily" >
             <DailyTrendReport />
+          </Route>
+          <Route exact path='/wordcloud' >
+            <WordCloudReport />
           </Route>
           <Route path='*' component={NoData} />
         </Switch>
