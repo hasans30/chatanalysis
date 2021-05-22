@@ -20,7 +20,7 @@ async function getAdminReport(page = 1, month, all="true" ){
   const query = all==="true"? alltimeQuery: monthlyQuery;
   const rows = await db.query(query,monthRange);
   const data = helper.emptyOrRows(rows);
-  const meta = {page};
+  const meta = {page:page,month:!month? 'all':month};
 
   return {
     data,
