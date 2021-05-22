@@ -7,6 +7,7 @@ import NoData from "./components/no-data/NoData";
 import MonthlyReport from "./features/MonthlyReport";
 import DailyTrendReport from "./features/DailyTrendReport";
 import WordCloudReport from "./features/WordCloudReport";
+import AdminReport from "./features/AdminReport";
 
 function App() {
   initializeIcons();
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route exact path='/wordcloud' >
             <WordCloudReport />
+          </Route>
+          <Route exact path='/admin-reports' >
+            <AdminReport />
           </Route>
           <Route path='*' component={NoData} />
         </Switch>

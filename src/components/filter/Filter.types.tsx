@@ -10,7 +10,7 @@ export enum FilterType {
     Granularity
 }
 
-export const months = ['jan', 'feb', 'mar', 'apr', 'may', 'june', 'july', 'aug', 'sep', 'oct', 'nov', 'dec'];
+export const months = ['all', 'jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
 export type MonthsFilter = typeof months[number];
 
 export const granularities = ['days', 'weeks', 'months'];

@@ -24,5 +24,11 @@ export const SidebarData = [
     path: '/wordcloud',
     icon: <IoIcons.IoIosPaper />,
     cName: "nav-text",
+  },
+  {
+    title: 'Admin tasks',
+    path: '/admin-reports',
+    icon: <IoIcons.IoIosPaper />,
+    cName: "nav-text",
   }
 ];
