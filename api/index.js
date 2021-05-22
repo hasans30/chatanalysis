@@ -9,6 +9,7 @@ const  monthlyStatRouter = require("./routes/monthlyStat");
 const  monthlyAllStatRouter = require("./routes/monthlyStatAll");
 const getDailyTrendsRouter = require('./routes/dailyTrends');
 const getWordClouds= require('./routes/wordClouds');
+const getAdminReport= require('./routes/adminReports');
 
 var corsOptions = {
   origin: '*',
@@ -32,6 +33,7 @@ app.use("/data",cors(),monthlyStatRouter);
 app.use("/allmonthly",cors(),monthlyAllStatRouter);
 app.use("/dailytrends",cors(),getDailyTrendsRouter);
 app.use("/wordclouds",cors(),getWordClouds);
+app.use("/adminreports",cors(),getAdminReport);
 
 /* Error handler middleware */
 app.use((err, req, res, next) => {
