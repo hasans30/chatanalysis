@@ -5,6 +5,9 @@ import { initializeIcons } from '@fluentui/react/lib/Icons';
 import 'office-ui-fabric-react/dist/css/fabric.css';
 import NoData from "./components/no-data/NoData";
 import MonthlyReport from "./features/MonthlyReport";
+import DailyTrendReport from "./features/DailyTrendReport";
+import WordCloudReport from "./features/WordCloudReport";
+import AdminReport from "./features/AdminReport";
 
 import { useQuery } from '@apollo/client';
 import { GET_APP_STATE } from './operations/queries/getAppState';
@@ -26,6 +29,15 @@ function App() {
           </Route>
           <Route exact path="/monthly-all" >
             <MonthlyReport compact={false} />
+          </Route>
+          <Route exact path="/daily" >
+            <DailyTrendReport />
+          </Route>
+          <Route exact path='/wordcloud' >
+            <WordCloudReport />
+          </Route>
+          <Route exact path='/admin-reports' >
+            <AdminReport />
           </Route>
           <Route path='*' component={NoData} />
         </Switch>

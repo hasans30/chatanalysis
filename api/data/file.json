@@ -1,0 +1,1207 @@
+{
+    "data": [
+        {
+            "name": "na",
+            "weight": 598
+        },
+        {
+            "name": "না",
+            "weight": 340
+        },
+        {
+            "name": "er",
+            "weight": 336
+        },
+        {
+            "name": "e",
+            "weight": 336
+        },
+        {
+            "name": "to",
+            "weight": 277
+        },
+        {
+            "name": "-",
+            "weight": 259
+        },
+        {
+            "name": "ki",
+            "weight": 252
+        },
+        {
+            "name": "ta",
+            "weight": 250
+        },
+        {
+            "name": "kore",
+            "weight": 248
+        },
+        {
+            "name": "তো",
+            "weight": 222
+        },
+        {
+            "name": "কি",
+            "weight": 219
+        },
+        {
+            "name": "আর",
+            "weight": 216
+        },
+        {
+            "name": "করে",
+            "weight": 206
+        },
+        {
+            "name": "ke",
+            "weight": 204
+        },
+        {
+            "name": "r",
+            "weight": 177
+        },
+        {
+            "name": "আমি",
+            "weight": 171
+        },
+        {
+            "name": "ar",
+            "weight": 164
+        },
+        {
+            "name": "o",
+            "weight": 156
+        },
+        {
+            "name": "তুই",
+            "weight": 147
+        },
+        {
+            "name": "hobe",
+            "weight": 136
+        },
+        {
+            "name": "আমার",
+            "weight": 133
+        },
+        {
+            "name": "theke",
+            "weight": 127
+        },
+        {
+            "name": "টা",
+            "weight": 116
+        },
+        {
+            "name": "থেকে",
+            "weight": 115
+        },
+        {
+            "name": "tor",
+            "weight": 112
+        },
+        {
+            "name": "te",
+            "weight": 110
+        },
+        {
+            "name": "এই",
+            "weight": 107
+        },
+        {
+            "name": "ও",
+            "weight": 103
+        },
+        {
+            "name": "ami",
+            "weight": 103
+        },
+        {
+            "name": "amar",
+            "weight": 102
+        },
+        {
+            "name": "যে",
+            "weight": 98
+        },
+        {
+            "name": "tui",
+            "weight": 97
+        },
+        {
+            "name": "O",
+            "weight": 96
+        },
+        {
+            "name": "সব",
+            "weight": 95
+        },
+        {
+            "name": "একটা",
+            "weight": 94
+        },
+        {
+            "name": "niye",
+            "weight": 93
+        },
+        {
+            "name": "Ti",
+            "weight": 92
+        },
+        {
+            "name": "হবে",
+            "weight": 90
+        },
+        {
+            "name": "je",
+            "weight": 88
+        },
+        {
+            "name": "কে",
+            "weight": 86
+        },
+        {
+            "name": "tai",
+            "weight": 86
+        },
+        {
+            "name": "কিছু",
+            "weight": 85
+        },
+        {
+            "name": "ektu",
+            "weight": 85
+        },
+        {
+            "name": "bhai",
+            "weight": 85
+        },
+        {
+            "name": "মনে",
+            "weight": 85
+        },
+        {
+            "name": "এর",
+            "weight": 83
+        },
+        {
+            "name": "তোর",
+            "weight": 83
+        },
+        {
+            "name": "korte",
+            "weight": 80
+        },
+        {
+            "name": "nei",
+            "weight": 80
+        },
+        {
+            "name": "bole",
+            "weight": 79
+        },
+        {
+            "name": "এটা",
+            "weight": 79
+        },
+        {
+            "name": "ache",
+            "weight": 78
+        },
+        {
+            "name": "একটু",
+            "weight": 75
+        },
+        {
+            "name": "আবার",
+            "weight": 74
+        },
+        {
+            "name": "of",
+            "weight": 74
+        },
+        {
+            "name": "??",
+            "weight": 72
+        },
+        {
+            "name": "ekta",
+            "weight": 72
+        },
+        {
+            "name": "the",
+            "weight": 72
+        },
+        {
+            "name": "তাহলে",
+            "weight": 71
+        },
+        {
+            "name": "আজ",
+            "weight": 70
+        },
+        {
+            "name": "না!",
+            "weight": 69
+        },
+        {
+            "name": "kono",
+            "weight": 69
+        },
+        {
+            "name": "BJP",
+            "weight": 69
+        },
+        {
+            "name": "কিন্তু",
+            "weight": 68
+        },
+        {
+            "name": "hoye",
+            "weight": 68
+        },
+        {
+            "name": "আছে",
+            "weight": 67
+        },
+        {
+            "name": "করতে",
+            "weight": 67
+        },
+        {
+            "name": "and",
+            "weight": 67
+        },
+        {
+            "name": "এ",
+            "weight": 66
+        },
+        {
+            "name": "in",
+            "weight": 66
+        },
+        {
+            "name": "Ai",
+            "weight": 65
+        },
+        {
+            "name": "এখন",
+            "weight": 65
+        },
+        {
+            "name": "কথা",
+            "weight": 63
+        },
+        {
+            "name": "তাই",
+            "weight": 63
+        },
+        {
+            "name": "kichu",
+            "weight": 63
+        },
+        {
+            "name": "hoi",
+            "weight": 62
+        },
+        {
+            "name": "কোনো",
+            "weight": 61
+        },
+        {
+            "name": "seta",
+            "weight": 60
+        },
+        {
+            "name": "tar",
+            "weight": 60
+        },
+        {
+            "name": "–",
+            "weight": 60
+        },
+        {
+            "name": "mone",
+            "weight": 59
+        },
+        {
+            "name": "bhalo",
+            "weight": 58
+        },
+        {
+            "name": "বলে",
+            "weight": 58
+        },
+        {
+            "name": "jabe",
+            "weight": 58
+        },
+        {
+            "name": "E",
+            "weight": 58
+        },
+        {
+            "name": "লেনিন",
+            "weight": 58
+        },
+        {
+            "name": "jodi",
+            "weight": 57
+        },
+        {
+            "name": "hoy",
+            "weight": 57
+        },
+        {
+            "name": "vote",
+            "weight": 57
+        },
+        {
+            "name": "ভালো",
+            "weight": 56
+        },
+        {
+            "name": "katha",
+            "weight": 56
+        },
+        {
+            "name": "but",
+            "weight": 56
+        },
+        {
+            "name": "TMC",
+            "weight": 56
+        },
+        {
+            "name": "নেই",
+            "weight": 55
+        },
+        {
+            "name": "N",
+            "weight": 55
+        },
+        {
+            "name": "bol",
+            "weight": 54
+        },
+        {
+            "name": "ঠিক",
+            "weight": 54
+        },
+        {
+            "name": "a",
+            "weight": 53
+        },
+        {
+            "name": "ei",
+            "weight": 52
+        },
+        {
+            "name": "সেটা",
+            "weight": 52
+        },
+        {
+            "name": "Aar",
+            "weight": 52
+        },
+        {
+            "name": "geche",
+            "weight": 51
+        },
+        {
+            "name": "noi",
+            "weight": 50
+        },
+        {
+            "name": "keno",
+            "weight": 50
+        },
+        {
+            "name": "abar",
+            "weight": 49
+        },
+        {
+            "name": "হয়",
+            "weight": 49
+        },
+        {
+            "name": "না।",
+            "weight": 48
+        },
+        {
+            "name": "din",
+            "weight": 48
+        },
+        {
+            "name": "ekhon",
+            "weight": 48
+        },
+        {
+            "name": "pare",
+            "weight": 48
+        },
+        {
+            "name": "thik",
+            "weight": 48
+        },
+        {
+            "name": "CPM",
+            "weight": 47
+        },
+        {
+            "name": "de",
+            "weight": 47
+        },
+        {
+            "name": "ja",
+            "weight": 47
+        },
+        {
+            "name": "K",
+            "weight": 46
+        },
+        {
+            "name": "kora",
+            "weight": 46
+        },
+        {
+            "name": "এবার",
+            "weight": 46
+        },
+        {
+            "name": "হয়ে",
+            "weight": 45
+        },
+        {
+            "name": "eta",
+            "weight": 45
+        },
+        {
+            "name": "Et",
+            "weight": 45
+        },
+        {
+            "name": "যদি",
+            "weight": 44
+        },
+        {
+            "name": "korbe",
+            "weight": 44
+        },
+        {
+            "name": "ওরা",
+            "weight": 44
+        },
+        {
+            "name": "হয়ে",
+            "weight": 44
+        },
+        {
+            "name": "is",
+            "weight": 44
+        },
+        {
+            "name": "Tr",
+            "weight": 43
+        },
+        {
+            "name": "অনেক",
+            "weight": 43
+        },
+        {
+            "name": "kor",
+            "weight": 43
+        },
+        {
+            "name": "for",
+            "weight": 43
+        },
+        {
+            "name": "1",
+            "weight": 42
+        },
+        {
+            "name": "ভাই",
+            "weight": 42
+        },
+        {
+            "name": "jai",
+            "weight": 42
+        },
+        {
+            "name": "যাবে",
+            "weight": 41
+        },
+        {
+            "name": "তার",
+            "weight": 41
+        },
+        {
+            "name": "sab",
+            "weight": 41
+        },
+        {
+            "name": "কেউ",
+            "weight": 41
+        },
+        {
+            "name": "eto",
+            "weight": 41
+        },
+        {
+            "name": "bipul",
+            "weight": 41
+        },
+        {
+            "name": "আগে",
+            "weight": 40
+        },
+        {
+            "name": "নিয়ে",
+            "weight": 40
+        },
+        {
+            "name": "3",
+            "weight": 40
+        },
+        {
+            "name": "age",
+            "weight": 40
+        },
+        {
+            "name": "কাজ",
+            "weight": 39
+        },
+        {
+            "name": "koreche",
+            "weight": 39
+        },
+        {
+            "name": "diye",
+            "weight": 39
+        },
+        {
+            "name": "holo",
+            "weight": 39
+        },
+        {
+            "name": "আমাদের",
+            "weight": 39
+        },
+        {
+            "name": "grp",
+            "weight": 39
+        },
+        {
+            "name": "Tanks",
+            "weight": 39
+        },
+        {
+            "name": "যা",
+            "weight": 38
+        },
+        {
+            "name": "sathe",
+            "weight": 38
+        },
+        {
+            "name": "kal",
+            "weight": 38
+        },
+        {
+            "name": "didi",
+            "weight": 38
+        },
+        {
+            "name": "জন্য",
+            "weight": 38
+        },
+        {
+            "name": "আমরা",
+            "weight": 37
+        },
+        {
+            "name": "lok",
+            "weight": 37
+        },
+        {
+            "name": "k",
+            "weight": 37
+        },
+        {
+            "name": "por",
+            "weight": 37
+        },
+        {
+            "name": "chilo",
+            "weight": 37
+        },
+        {
+            "name": "নিয়ে",
+            "weight": 37
+        },
+        {
+            "name": "pore",
+            "weight": 37
+        },
+        {
+            "name": "aaj",
+            "weight": 36
+        },
+        {
+            "name": "Hppy",
+            "weight": 36
+        },
+        {
+            "name": "খুব",
+            "weight": 36
+        },
+        {
+            "name": "তোকে",
+            "weight": 36
+        },
+        {
+            "name": "এক",
+            "weight": 35
+        },
+        {
+            "name": "gelo",
+            "weight": 35
+        },
+        {
+            "name": "কাল",
+            "weight": 35
+        },
+        {
+            "name": "bolte",
+            "weight": 35
+        },
+        {
+            "name": "করা",
+            "weight": 35
+        },
+        {
+            "name": "mane",
+            "weight": 35
+        },
+        {
+            "name": "বল",
+            "weight": 35
+        },
+        {
+            "name": "oke",
+            "weight": 34
+        },
+        {
+            "name": "এত",
+            "weight": 34
+        },
+        {
+            "name": "or",
+            "weight": 34
+        },
+        {
+            "name": "toh",
+            "weight": 34
+        },
+        {
+            "name": "ভুল",
+            "weight": 34
+        },
+        {
+            "name": "তে",
+            "weight": 34
+        },
+        {
+            "name": "South",
+            "weight": 34
+        },
+        {
+            "name": "dekh",
+            "weight": 33
+        },
+        {
+            "name": "debe",
+            "weight": 33
+        },
+        {
+            "name": "দিদি",
+            "weight": 33
+        },
+        {
+            "name": "kotha",
+            "weight": 33
+        },
+        {
+            "name": "শুধু",
+            "weight": 33
+        },
+        {
+            "name": "সাথে",
+            "weight": 32
+        },
+        {
+            "name": "ওর",
+            "weight": 32
+        },
+        {
+            "name": "Hm",
+            "weight": 32
+        },
+        {
+            "name": "bengal",
+            "weight": 32
+        },
+        {
+            "name": "then",
+            "weight": 32
+        },
+        {
+            "name": "asbe",
+            "weight": 32
+        },
+        {
+            "name": "ebar",
+            "weight": 32
+        },
+        {
+            "name": "হয়",
+            "weight": 32
+        },
+        {
+            "name": "সবাই",
+            "weight": 32
+        },
+        {
+            "name": "সেই",
+            "weight": 31
+        },
+        {
+            "name": "চলে",
+            "weight": 31
+        },
+        {
+            "name": "kintu",
+            "weight": 31
+        },
+        {
+            "name": "টাকা",
+            "weight": 31
+        },
+        {
+            "name": "A",
+            "weight": 31
+        },
+        {
+            "name": "শুভ",
+            "weight": 31
+        },
+        {
+            "name": "dite",
+            "weight": 31
+        },
+        {
+            "name": "2",
+            "weight": 31
+        },
+        {
+            "name": "party",
+            "weight": 31
+        },
+        {
+            "name": "keu",
+            "weight": 31
+        },
+        {
+            "name": "ra",
+            "weight": 31
+        },
+        {
+            "name": "korche",
+            "weight": 30
+        },
+        {
+            "name": "করার",
+            "weight": 30
+        },
+        {
+            "name": "onek",
+            "weight": 30
+        },
+        {
+            "name": "ne",
+            "weight": 30
+        },
+        {
+            "name": "কর",
+            "weight": 30
+        },
+        {
+            "name": "পারে",
+            "weight": 30
+        },
+        {
+            "name": "bar",
+            "weight": 30
+        },
+        {
+            "name": "5",
+            "weight": 30
+        },
+        {
+            "name": "hole",
+            "weight": 30
+        },
+        {
+            "name": "hoyeche",
+            "weight": 30
+        },
+        {
+            "name": "হচ্ছে",
+            "weight": 30
+        },
+        {
+            "name": "র",
+            "weight": 30
+        },
+        {
+            "name": "এবং",
+            "weight": 30
+        },
+        {
+            "name": "Tis",
+            "weight": 29
+        },
+        {
+            "name": "হলো",
+            "weight": 29
+        },
+        {
+            "name": "besi",
+            "weight": 29
+        },
+        {
+            "name": "amader",
+            "weight": 29
+        },
+        {
+            "name": "koris",
+            "weight": 29
+        },
+        {
+            "name": "you",
+            "weight": 29
+        },
+        {
+            "name": "india",
+            "weight": 29
+        },
+        {
+            "name": "বা",
+            "weight": 29
+        },
+        {
+            "name": "gulo",
+            "weight": 29
+        },
+        {
+            "name": "Ami",
+            "weight": 29
+        },
+        {
+            "name": "ek",
+            "weight": 29
+        },
+        {
+            "name": "নিজের",
+            "weight": 29
+        },
+        {
+            "name": "তখন",
+            "weight": 29
+        },
+        {
+            "name": "বলতে",
+            "weight": 29
+        },
+        {
+            "name": "ভোট",
+            "weight": 29
+        },
+        {
+            "name": "পরে",
+            "weight": 29
+        },
+        {
+            "name": "sabai",
+            "weight": 28
+        },
+        {
+            "name": "khub",
+            "weight": 28
+        },
+        {
+            "name": "was",
+            "weight": 28
+        },
+        {
+            "name": "তবে",
+            "weight": 28
+        },
+        {
+            "name": "korbo",
+            "weight": 28
+        },
+        {
+            "name": "cpm",
+            "weight": 28
+        },
+        {
+            "name": "ni",
+            "weight": 28
+        },
+        {
+            "name": "be",
+            "weight": 28
+        },
+        {
+            "name": "bhul",
+            "weight": 28
+        },
+        {
+            "name": "chai",
+            "weight": 28
+        },
+        {
+            "name": "ba",
+            "weight": 28
+        },
+        {
+            "name": "toke",
+            "weight": 28
+        },
+        {
+            "name": "sob",
+            "weight": 28
+        },
+        {
+            "name": "korlo",
+            "weight": 27
+        },
+        {
+            "name": "korar",
+            "weight": 27
+        },
+        {
+            "name": "না?",
+            "weight": 27
+        },
+        {
+            "name": "মানে",
+            "weight": 27
+        },
+        {
+            "name": "uchit",
+            "weight": 27
+        },
+        {
+            "name": "der",
+            "weight": 27
+        },
+        {
+            "name": "গেছে",
+            "weight": 27
+        },
+        {
+            "name": "will",
+            "weight": 27
+        },
+        {
+            "name": "হলে",
+            "weight": 27
+        },
+        {
+            "name": "নাকি",
+            "weight": 26
+        },
+        {
+            "name": "ekbar",
+            "weight": 26
+        },
+        {
+            "name": "moto",
+            "weight": 26
+        },
+        {
+            "name": "Birthday",
+            "weight": 26
+        },
+        {
+            "name": "nijer",
+            "weight": 26
+        },
+        {
+            "name": "দিয়ে",
+            "weight": 26
+        },
+        {
+            "name": "মানুষ",
+            "weight": 26
+        },
+        {
+            "name": "দিয়ে",
+            "weight": 26
+        },
+        {
+            "name": "message",
+            "weight": 25
+        },
+        {
+            "name": "ওই",
+            "weight": 25
+        },
+        {
+            "name": "state",
+            "weight": 25
+        },
+        {
+            "name": "jonyo",
+            "weight": 25
+        },
+        {
+            "name": "engine",
+            "weight": 25
+        },
+        {
+            "name": "Bai",
+            "weight": 25
+        },
+        {
+            "name": "tahole",
+            "weight": 25
+        },
+        {
+            "name": "পর",
+            "weight": 25
+        },
+        {
+            "name": "chole",
+            "weight": 25
+        },
+        {
+            "name": "সময়",
+            "weight": 25
+        },
+        {
+            "name": "noy",
+            "weight": 25
+        },
+        {
+            "name": "ওটা",
+            "weight": 25
+        },
+        {
+            "name": "দেবে",
+            "weight": 25
+        },
+        {
+            "name": "kori",
+            "weight": 24
+        },
+        {
+            "name": "deleted",
+            "weight": 24
+        },
+        {
+            "name": "aro",
+            "weight": 24
+        },
+        {
+            "name": "sudhu",
+            "weight": 24
+        },
+        {
+            "name": "baki",
+            "weight": 24
+        },
+        {
+            "name": "result",
+            "weight": 24
+        },
+        {
+            "name": "kache",
+            "weight": 24
+        },
+        {
+            "name": "valo",
+            "weight": 24
+        },
+        {
+            "name": "suru",
+            "weight": 24
+        },
+        {
+            "name": "আমাকে",
+            "weight": 24
+        },
+        {
+            "name": "ধন্যবাদ",
+            "weight": 24
+        },
+        {
+            "name": "Kolkata)",
+            "weight": 24
+        },
+        {
+            "name": "নি",
+            "weight": 23
+        },
+        {
+            "name": "bolbe",
+            "weight": 23
+        },
+        {
+            "name": "ey",
+            "weight": 23
+        },
+        {
+            "name": "J",
+            "weight": 23
+        },
+        {
+            "name": "kau",
+            "weight": 23
+        },
+        {
+            "name": "যারা",
+            "weight": 23
+        },
+        {
+            "name": "bondho",
+            "weight": 23
+        },
+        {
+            "name": "4",
+            "weight": 23
+        },
+        {
+            "name": "হতে",
+            "weight": 23
+        },
+        {
+            "name": "bolis",
+            "weight": 23
+        },
+        {
+            "name": "R",
+            "weight": 23
+        },
+        {
+            "name": "seat",
+            "weight": 23
+        }
+    ],
+    "meta": {
+        "page": 1
+    }
+}

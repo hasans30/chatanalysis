@@ -25,7 +25,19 @@ function getRange(month){
 
 }
 
-async function getMonthlyStat(page = 1, month ){
+const rawquery = `
+select sender as name, count(*) as count 
+from chat_text where timestamp>=? and timestamp<? 
+group by chat_text.sender order by count(*) desc;
+`;
+const joinquery= `select name_map.name_mine as name, count(*) as count
+    from chat_text,name_map 
+    where chat_text.sender=name_map.ID 
+    and timestamp>=? and timestamp<?
+    group by chat_text.sender 
+    order by count(*) desc;
+    `;
+async function getMonthlyStat(page = 1, month, rawdata ){
   const monthsRange=getRange(month);
   if(monthsRange===undefined)
     return {
@@ -33,14 +45,9 @@ async function getMonthlyStat(page = 1, month ){
       meta:{page}
     };
   const offset = helper.getOffset(page, config.listPerPage);
+  const query=!!rawdata? rawquery: joinquery;
   const rows = await db.query(
-    `select name_map.name_mine as name, count(*) as count
-    from chat_text,name_map 
-    where chat_text.sender=name_map.ID 
-    and timestamp>=? and timestamp<?
-    group by chat_text.sender 
-    order by count(*) desc;
-    `,
+    query,
     monthsRange
   );
   const data = helper.emptyOrRows(rows);

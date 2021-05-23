@@ -4,6 +4,7 @@ import { memo, useCallback, useState } from 'react';
 import useSWR from 'swr';
 import TableChart from '../components/chart-renderer/TableChart';
 import { Chart } from '../components/chart/Chart';
+import { ChartType } from '../components/chart/Chart.types';
 import { Filter } from '../components/filter/Filter';
 import { ReportType, Query } from '../components/query/ReportQueries';
 
@@ -24,10 +25,10 @@ const MonthlyReport = memo<MonthlyReportProps>(({ compact = true }) => {
     const errorState = <div>No data available..</div>;
     const spinner = <Spinner label="loading..." />
     const charts = !data ? spinner : <>
-        <Chart data={data.data} selectedFilter={selectedFilter} />
+        <Chart data={data.data} chartType={ChartType.ColumnChart} />
         <TableChart data={data.data} />
     </>;
-    const filter = <Filter filterid={selectedFilter} onFilterChange={onChange} />;
+    const filter = <Filter currentFilter={selectedFilter} onFilterChange={onChange} />;
     return <div className='reportcontainer'>
         {filter}
         {error ? errorState : charts}
