@@ -27,6 +27,10 @@ const AdminReport = memo(() => {
     const [selectedFilter, setSelectedFilters] = useState(currentMonth);
     const [items, setItems] = useState<IDisplayReportData[]>([]);
     const [columns, setColumns] = useState<IColumn[]>([]);
+    /* 
+        need for useRef refer https://stackoverflow.com/questions/62373062/fluentui-detailslist-oncolumnclick-with-react-hooks-gives-empty-items/64572688#64572688
+        concept https://css-tricks.com/dealing-with-stale-props-and-states-in-reacts-functional-components/
+    */
     const refItems = useRef(items);
     const refColumns = useRef(columns);
 
