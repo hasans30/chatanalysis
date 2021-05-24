@@ -4,11 +4,11 @@ import React, { memo, useCallback, useState } from 'react';
 import useSWR from 'swr';
 import WordCloud from '../components/chart/WordCloud';
 import { Filter } from '../components/filter/Filter';
-import { Query, ReportType } from '../components/query/ReportQueries';
+import { useAppQuery, ReportType } from '../components/query/ReportQueries';
 
 const WordCloudReport = memo(() => {
 
-    const query = Query.get(ReportType.WordCloud);
+    const query = useAppQuery(ReportType.WordCloud);
     const currentMonth = moment().format("MMM").toLowerCase();
     const [selectedFilter, setSelectedFilters] = useState(currentMonth);
     const onChange = useCallback((values) => {

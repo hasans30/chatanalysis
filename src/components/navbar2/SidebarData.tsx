@@ -1,5 +1,7 @@
 import * as IoIcons from "react-icons/io";
 
+export const orgPattern = "/:org([a-z0-9]+)/:year([0-9]{4})";
+
 export const SidebarData = [
   {
     icon: <IoIcons.IoIosPaper />,

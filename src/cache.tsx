@@ -17,7 +17,5 @@ export const cache: InMemoryCache = new InMemoryCache(
     }
 );
 
-const initialState: AppState = {
-    org: 'nhs'
-}
+const initialState: AppState = {};
 export const appStateVar: ReactiveVar<AppState> = makeVar<AppState>(initialState);

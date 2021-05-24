@@ -3,7 +3,8 @@ import { DetailsList, IColumn } from 'office-ui-fabric-react';
 import React, { memo, useCallback, useEffect, useRef, useState } from 'react';
 import useSWR from 'swr';
 import { Filter } from '../components/filter/Filter';
-import { ReportType, Query } from '../components/query/ReportQueries';
+import { ReportType, useAppQuery } from '../components/query/ReportQueries';
+
 
 interface IReportData {
     actor: string;
@@ -38,7 +39,7 @@ const AdminReport = memo(() => {
         setSelectedFilters(values);
     }, []);
 
-    const query = Query.get(ReportType.AdminReport);
+    const query = useAppQuery(ReportType.AdminReport);
 
     const filter = <Filter currentFilter={selectedFilter} onFilterChange={onChange} />;
 
@@ -121,7 +122,7 @@ function getColumns(_onColumnClick: any): IColumn[] {
     const commonProps = { minWidth: 100, maxWidth: 200, isResizable: true, onColumnClick: _onColumnClick };
     const columns = [
         { key: 'column0', name: 'Who', fieldName: 'actor' },
-        { key: 'column1', name: 'Action', fieldName: 'action' },
+        { key: 'column1', name: 'Action', fieldName: 'action', isSorted: true },
         { key: 'column2', name: 'Subject', fieldName: 'actedon' },
         { key: 'column3', name: '#Times', fieldName: 'count' },
     ].map(e => { return { ...commonProps, ...e } });

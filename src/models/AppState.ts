@@ -1,3 +1,4 @@
 export default interface AppState {
-    org: string
+    org?: string;
+    year?: string
 }

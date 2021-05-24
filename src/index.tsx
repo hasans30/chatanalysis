@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ApolloClient, ApolloProvider } from '@apollo/client';
 import { cache } from './cache';
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
+import { orgPattern } from './components/navbar2/SidebarData';
 
 
 export const client = new ApolloClient({
@@ -12,12 +14,20 @@ export const client = new ApolloClient({
   connectToDevTools: true,
 });
 
-
+const org = process.env.REACT_APP_ORG;
+const year = process.env.REACT_APP_YEAR;
 
 ReactDOM.render(
   <React.StrictMode>
     <ApolloProvider client={client} >
-      <App />
+      <BrowserRouter >
+        <Redirect exact from='/' to={`${org}/${year}`} strict />
+        <Switch>
+          <Route path={orgPattern}>
+            <App />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </ApolloProvider>
   </React.StrictMode>,
   document.getElementById('root')

@@ -1,3 +1,7 @@
+import { useQuery } from '@apollo/client';
+import { GET_APP_STATE } from '../../operations/queries/getAppState';
+
+
  enum ReportType {
     CompactMonthly,
     AllMonthly,
@@ -6,25 +10,33 @@
     AdminReport,
 }
 
-const host=process.env.REACT_APP_API_BASE||'';
-const org=process.env.REACT_APP_ORG||'';
-
-//TODO: move the year in url parameter
-const year=process.env.REACT_APP_YEAR||'';
-const baseURL=`${host}/${org}/${year}`;
-
-
-const Query = new Map(
+const querySuffix = new Map(
     [
-        [ReportType.CompactMonthly,`${baseURL}/data/compact-monthly`],
-        [ReportType.AllMonthly,`${baseURL}/data/all-monthly`],
-        [ReportType.DailyTotalTrend,`${baseURL}/data/daily-total-trend/data.json`],
-        [ReportType.WordCloud,`${baseURL}/data/wordcloud`],
-        [ReportType.AdminReport,`${baseURL}/data/admin-report`]
+        [ReportType.CompactMonthly,`data/compact-monthly`],
+        [ReportType.AllMonthly,`data/all-monthly`],
+        [ReportType.DailyTotalTrend,`data/daily-total-trend/data.json`],
+        [ReportType.WordCloud,`data/wordcloud`],
+        [ReportType.AdminReport,`data/admin-report`]
     ]
 );
 
 
-export { Query,
+function useBasePath(){
+    const {data:{appState:{org,year}} } = useQuery(GET_APP_STATE);
+    const basePath=`${org}/${year}`;
+    return basePath;
+}
+
+function useAppQuery(queryType: ReportType):string {
+    const host=process.env.REACT_APP_API_BASE||'';
+    const baseURL=`${host}/${useBasePath()}`;
+    return `${baseURL}/${querySuffix.get(queryType)}`;
+
+}
+
+
+export { 
+    useAppQuery,
+    useBasePath,
     ReportType
 }
