@@ -50,8 +50,8 @@ function getStartParams(): { org: string | undefined; year: string | undefined; 
 
 function getLocationParams(queryString: string = window.location.search) {
   const parameters = new URLSearchParams(queryString);
-  const org = parameters.get('group') || process.env.REACT_APP_ORG;
-  const year = parameters.get('year') || process.env.REACT_APP_YEAR || moment().year().toString();
+  const org = parameters.get('group') || 'demo';
+  const year = org === '1970' ? 'demo' : parameters.get('year') || moment().year().toString();
 
   return { org, year }
 
