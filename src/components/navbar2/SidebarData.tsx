@@ -1,35 +1,33 @@
 import * as IoIcons from "react-icons/io";
 
-export const orgPattern = "/:org([a-z0-9]+)/:year([0-9]{4})";
-
 export const SidebarData = [
+  {
+    title: 'Monthly count (all)',
+    path: '/report/monthly-all',
+    icon: <IoIcons.IoIosPaper />,
+    cName: "nav-text",
+  },
   {
     icon: <IoIcons.IoIosPaper />,
     cName: "nav-text",
     title: 'Monthly count (compact)',
-    path: '/monthly-compact',
-  },
-  {
-    title: 'Monthly count (all)',
-    path: '/monthly-all',
-    icon: <IoIcons.IoIosPaper />,
-    cName: "nav-text",
+    path: '/report/monthly-compact',
   },
   {
     title: 'Daily trend',
-    path: '/daily',
+    path: '/report/daily',
     icon: <IoIcons.IoIosPaper />,
     cName: "nav-text",
   },
   {
     title: 'Word cloud',
-    path: '/wordcloud',
+    path: '/report/wordcloud',
     icon: <IoIcons.IoIosPaper />,
     cName: "nav-text",
   },
   {
     title: 'Admin tasks',
-    path: '/admin-reports',
+    path: '/report/admin-reports',
     icon: <IoIcons.IoIosPaper />,
     cName: "nav-text",
   }
