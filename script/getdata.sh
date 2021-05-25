@@ -1,8 +1,11 @@
 #!/bin/bash
 
 # mon="jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"
-mon="apr","may"
+mon="jan","feb","mar","apr","may"
+# mon="apr","may"
 year="2021"
+rawdata="rawdata=true"
+echo "rawdata=true; use false if name map information not available"
 
 function makeAPICallwithMonth {
     list=$(echo $1|tr  "," " ")
@@ -39,7 +42,7 @@ popd
 #monthly compact
 #localhost:3030/data?month=may
 pushd $dir_compact
-makeAPICallwithMonth $mon "localhost:3030/data"
+makeAPICallwithMonth $mon "localhost:3030/data" $rawdata
 # all admin report
 popd
 
@@ -48,11 +51,12 @@ popd
 
 #monthly all
 pushd $dir_allmon
-makeAPICallwithMonth $mon "localhost:3030/allmonthly" 
+makeAPICallwithMonth $mon "localhost:3030/allmonthly" $rawdata
 popd
 
 #wodcloud
 pushd $dir_wordcloud
+# echo "skipped wordcloud"
 makeAPICallwithMonth $mon "localhost:3030/wordclouds" "max=300"
 popd
 
