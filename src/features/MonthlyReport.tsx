@@ -6,14 +6,17 @@ import TableChart from '../components/chart-renderer/TableChart';
 import { Chart } from '../components/chart/Chart';
 import { ChartType } from '../components/chart/Chart.types';
 import { Filter } from '../components/filter/Filter';
-import { ReportType, Query } from '../components/query/ReportQueries';
+import { ReportType, useAppQuery } from '../components/query/ReportQueries';
 
 export interface MonthlyReportProps {
     compact: boolean
 }
 
 const MonthlyReport = memo<MonthlyReportProps>(({ compact = true }) => {
-    const query = compact ? Query.get(ReportType.CompactMonthly) : Query.get(ReportType.AllMonthly);
+    const compactQuery = useAppQuery(ReportType.CompactMonthly);
+    const allQuery = useAppQuery(ReportType.AllMonthly);
+    const query = compact ? compactQuery : allQuery;
+
     const currentMonth = moment().format("MMM").toLowerCase();
     const [selectedFilter, setSelectedFilters] = useState(currentMonth);
     const { data, error } = useSWR(`${query}/${selectedFilter}.json`);

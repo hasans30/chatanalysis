@@ -9,11 +9,24 @@ import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import './Navbar.css';
 import { IconContext } from 'react-icons';
+import { useQuery } from '@apollo/client';
+import { GET_APP_STATE } from '../../operations/queries/getAppState';
 
 function Navbar() {
     const [sidebar, setSidebar] = useState(false);
+    const { data: { appState: { org } } } = useQuery(GET_APP_STATE);
 
     const showSidebar = () => setSidebar(!sidebar);
+
+    const filteredSidebarData = SidebarData.filter(elm => {
+        if (org === 'nhs' && elm.id === 2) {
+            return true;
+        }
+        if (org !== 'nhs' && elm.id === 2) {
+            return false;
+        }
+        return true;
+    });
 
     return (
         <>
@@ -30,10 +43,10 @@ function Navbar() {
                                 <AiIcons.AiOutlineClose />
                             </Link>
                         </li>
-                        {SidebarData.map((item, index) => {
+                        {filteredSidebarData.map((item, index) => {
                             return (
                                 <li key={index} className={item.cName}>
-                                    <Link to={item.path}>
+                                    <Link to={`${item.path}?group=${org}`}>
                                         {item.icon}
                                         <span>{item.title}</span>
                                     </Link>

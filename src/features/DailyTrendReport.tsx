@@ -7,7 +7,7 @@ import { Chart } from '../components/chart/Chart';
 import { ChartType } from '../components/chart/Chart.types';
 import { Filter } from '../components/filter/Filter';
 import { FilterType, granularities, GranularityFilter } from '../components/filter/Filter.types';
-import { Query, ReportType } from '../components/query/ReportQueries';
+import { useAppQuery, ReportType } from '../components/query/ReportQueries';
 
 const DailyTrendReport = memo(() => {
 
@@ -16,7 +16,7 @@ const DailyTrendReport = memo(() => {
         setSelectedFilters(values);
     }, []);
 
-    const query = Query.get(ReportType.DailyTotalTrend);
+    const query = useAppQuery(ReportType.DailyTotalTrend);
     const { data, error } = useSWR(`${query}`);
     const spinner = <Spinner label="loading..." />;
     const convertedData = useMemo(() => {
