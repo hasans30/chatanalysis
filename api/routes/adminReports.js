@@ -5,7 +5,7 @@ const adminReport = require('../services/adminReport');
 /* GET programming languages. */
 router.get('/', async function(req, res, next) {
   try {
-    res.json(await adminReport.getAdminReport(req.query.page,req.query.month,req.query.all));
+    res.json(await adminReport.getAdminReport(req.query.page,req.query.month,req.query.all,req.query.dbname));
   } catch (err) {
     console.error(`Error while getting programming languages `, err.message);
     next(err);

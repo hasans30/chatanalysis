@@ -4,9 +4,9 @@ const router = express.Router();
 const monthlyAllStat = require('../services/monthlyAllStat');
 
 /* GET programming languages. */
-router.get('/', async function(req, res, next) {
+router.get('/', async function (req, res, next) {
   try {
-    res.json(await monthlyAllStat.getMonthlyStat(req.query.page,req.query.month,req.query.rawdata));
+    res.json(await monthlyAllStat.getMonthlyStat(req.query.page, req.query.month, req.query.rawdata, req.query.dbname));
   } catch (err) {
     console.error(`Error while getting programming languages `, err.message);
     next(err);

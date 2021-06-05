@@ -30,6 +30,8 @@ function getRange(month){
   return range.get(month);
 
 }
+
+
 module.exports = {
   getOffset,
   emptyOrRows,

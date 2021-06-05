@@ -5,7 +5,7 @@ const config = {
     host: env.DB_HOST || 'dbserver',
     user: env.DB_USER || 'sqluser',
     password: env.DB_PASSWORD || 'password',
-    database: env.DB_NAME || 'mysql',
+    // database: env.DB_NAME || 'mysql',
   },
   listPerPage: env.LIST_PER_PAGE || 10,
 };

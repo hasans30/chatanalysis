@@ -1,16 +1,15 @@
 const db = require('./db');
 const helper = require('../helper');
-const config = require('../config');
+const { getQuery, queryType } = require('./queries');
 
 
-async function getDailyTrends(page = 1){
-  const rows = await db.query(
-        `
-          select count(*) as count, date(timestamp) as date from chat_text where timestamp>='2021-01-01' group by date
-        `
-  );
+async function getDailyTrends(page = 1, dbname) {
+
+  const query = getQuery(queryType.dailyTrends, dbname);
+
+  const rows = await db.query(query);
   const data = helper.emptyOrRows(rows);
-  const meta = {page};
+  const meta = { page };
 
   return {
     data,
@@ -19,5 +18,5 @@ async function getDailyTrends(page = 1){
 }
 
 module.exports = {
-    getDailyTrends
+  getDailyTrends
 }

@@ -1,23 +1,22 @@
 #!/bin/bash
 
 # mon="jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"
-mon="jan","feb","mar","apr","may"
-# mon="apr","may"
+# mon="jan","feb","mar","apr","may","jun"
+mon="jun","jul"
 year="2021"
 rawdata="rawdata=true"
 echo "rawdata=true; use false if name map information not available"
-
+dbname=$1
+echo "running for $dbname"
 function makeAPICallwithMonth {
     list=$(echo $1|tr  "," " ")
     url=$2
     extraparam=$3
 for m in  $list;
 do
-  curl "$url?month=$m&$extraparam"  -o $m.json;
+  curl "$url?month=$m&dbname=$dbname&$extraparam"  -o $m.json;
 done
-
 }
-
 
 dir_admin="data/admin-report/"
 dir_allmon="data/all-monthly/"
@@ -64,3 +63,5 @@ popd
 pushd $dir_dailytrend
 makeAPICallwithMonth "data" "localhost:3030/dailytrends"
 popd
+
+
